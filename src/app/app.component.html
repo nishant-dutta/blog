@@ -6,18 +6,5 @@
 </div>
 
 <div>
-    <app-posts></app-posts>
-    <app-posts></app-posts>
-    <app-posts></app-posts>
-    <app-posts></app-posts>
-    <app-posts></app-posts>
-    <app-posts></app-posts>
-    <app-posts></app-posts>
-    <app-posts></app-posts>
-    <app-posts></app-posts>
-    <app-posts></app-posts>
-    <app-posts></app-posts>
-    <app-posts></app-posts>
-    <app-posts></app-posts>
-    <app-posts></app-posts>    
+    <app-posts *ngFor="let data of postData" [src]="data.src" [title]="data.header" [summary]="data.summary"></app-posts>    
 </div>

@@ -5,6 +5,8 @@
           <h5 class="card-title">{{cardTitle}}</h5>
           <p class="card-text">{{cardSummary}}</p>
           <a href="#" class="btn btn-primary">Read</a>
+          <p-rating style="float: right;" [(ngModel)]="rating" [cancel]="false"></p-rating>
+          <i [ngStyle]="{'color':isBookmarked ? 'darkslategray' : 'darkgray' }" title="Add Bookmark" (click)="toggleBookmark()" class="pi pi-bookmark" style="font-size: 2.5em;position: absolute;right: 0;bottom: 0;margin-bottom: -15px;margin-right: -12px;color: goldenrod;cursor: pointer;"></i>
         </div>
-      </div>
+    </div>
 </div>

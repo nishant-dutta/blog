@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+import {RatingModule} from 'primeng/rating';
 
 import { AppComponent } from './app.component';
 import { SignInComponent } from './sign-in/sign-in.component';
@@ -24,7 +25,8 @@ import { SuggestedPostsComponent } from './suggested-posts/suggested-posts.compo
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    RatingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
