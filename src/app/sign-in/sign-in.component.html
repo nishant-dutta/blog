@@ -1,1 +1,58 @@
-<p>sign-in works!</p>
+<nav class="navbar navbar-dark" style="background-color: darkcyan;">
+    <!-- Navbar content -->
+    <i class="pi pi-star" style="font-size: 3em;"></i>
+    <a class="nav-link text-white mr-auto" href="#">Home</a>
+    <span class="text-white">
+      Don't have an account?
+    </span>
+    <span class="ml-1">
+      <button type="button" class="btn btn-success">Register</button>
+    </span>
+  </nav>
+
+  <div>
+    <div>
+        <form style="width: 35%;padding: 4em;float: right;">
+            <h4 style="text-align: center;color: darkcyan;">Welcome Aboard</h4>
+            <hr>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email address</label>
+              <input name="login" [(ngModel)]="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input name="login" [(ngModel)]="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            </div>
+
+            <div>
+                <input name="'login'" type="checkbox" [(ngModel)]="rememberLogin">
+                <span class="ml-2" style="font-size: 0.9em;">Remember me</span>
+            </div>
+
+            <button type="submit" class="btn btn-primary mt-2">Submit</button>
+            <span style="float: right;padding:20px;font-size:15px;cursor: pointer;">Forgot password?</span>
+          </form>
+      </div>
+    
+    <div>
+        <!-- <img src="./assets/smiley.jpg" alt="Smiley face" style="height: 100%;width: 60%;"> -->
+        <img src="./assets/image2.jpg" alt="Smiley face" style="height: 100%;width: 60%;">
+    </div>
+    
+    <div style="width: 50%;position: absolute;bottom: 0;padding: 1em;">
+        <div class="card">
+            <!-- <div class="card-header">
+              Quote
+            </div> -->
+            <div class="card-body">
+              <blockquote class="blockquote mb-0">
+                <p>Just do the best you can, no one can do more than that.</p>
+                <footer class="blockquote-footer"><cite title="Source Title">John Wooden</cite></footer>
+              </blockquote>
+            </div>
+          </div>
+    </div>
+    
+  </div>
+
