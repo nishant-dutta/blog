@@ -7,12 +7,18 @@ import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
+import { PostsComponent } from './posts/posts.component';
+import { TopNavigationBarComponent } from './top-navigation-bar/top-navigation-bar.component';
+import { SuggestedPostsComponent } from './suggested-posts/suggested-posts.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SignInComponent,
-    SignUpComponent
+    SignUpComponent,
+    PostsComponent,
+    TopNavigationBarComponent,
+    SuggestedPostsComponent
   ],
   imports: [
     BrowserModule,
