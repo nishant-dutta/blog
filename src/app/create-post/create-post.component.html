@@ -1,0 +1,36 @@
+<form [formGroup]="postForm" (ngSubmit)="createNewPost()">
+  <div class="ui-g">
+    <div class="ui-g-9">
+      <!-- <quill-editor [(ngModel)]="content"></quill-editor> -->
+      <p-editor formControlName="content" (onTextChange)="onContentChange($event)" [style]="{'height':'500px'}">
+      </p-editor>
+    </div>
+    <div class="ui-g-3">
+      <div class="form-group" [ngClass]="{
+        'has-danger': title.invalid, 
+        'has-success': title.valid
+      }">
+        <label>Post Title</label>
+        <input type="text" formControlName="title" class="form-control">
+        <div class="form-control-feedback" *ngIf="title.invalid && title.dirty">
+          Field is invalid
+        </div>
+
+      </div>
+
+      <div class="form-group">
+        <label>Summary</label>
+        <textarea rows="3" type="text" formControlName="summary" class="form-control"></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Create Post</button>
+
+
+      <pre>{{postForm.value | json}}</pre>
+    </div>
+
+  </div>
+</form>
+
+<h1 style="margin-top: 5%;text-align: center;border: groove;background-color: rebeccapurple;">Preview</h1>
+<div [innerHTML]="content.value" style="width: 75%;padding: 2%;"></div>

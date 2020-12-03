@@ -11,6 +11,13 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { PostsComponent } from './posts/posts.component';
 import { TopNavigationBarComponent } from './top-navigation-bar/top-navigation-bar.component';
 import { SuggestedPostsComponent } from './suggested-posts/suggested-posts.component';
+import { PostComponent } from './post/post.component';
+import { AllPostsComponent } from './all-posts/all-posts.component';
+import { AboutComponent } from './about/about.component';
+import { QuillModule } from 'ngx-quill';
+import { EditorModule } from 'primeng/editor';
+import { HttpClientModule } from '@angular/common/http';
+import { CreatePostComponent } from './create-post/create-post.component';
 
 @NgModule({
   declarations: [
@@ -19,14 +26,21 @@ import { SuggestedPostsComponent } from './suggested-posts/suggested-posts.compo
     SignUpComponent,
     PostsComponent,
     TopNavigationBarComponent,
-    SuggestedPostsComponent
+    SuggestedPostsComponent,
+    PostComponent,
+    AllPostsComponent,
+    AboutComponent,
+    CreatePostComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    RatingModule
+    RatingModule,
+    QuillModule.forRoot(),
+    EditorModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
